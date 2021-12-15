@@ -13,7 +13,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        //BooksTablseSeederを登録
+        //BooksTableSeederを登録
         $this->call(BooksTableSeeder::class);
     }
 }
