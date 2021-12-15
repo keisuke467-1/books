@@ -3,6 +3,9 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
+// Laravel8から使うコントローラーのuseが必要
+use App\Http\Controllers\BookController;
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -17,3 +20,7 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+// Laravel8から書き方が変更された
+// apiに対応したrestful(教P.290)にしておく
+Route::apiResource('/books',BookController::class);
