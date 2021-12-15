@@ -29,7 +29,6 @@ export default {
       data,
       getAPI,
     }
-
   }
 };
 </script>
